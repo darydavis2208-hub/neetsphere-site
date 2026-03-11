@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEET UG 2026 Rank Predictor Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <p class="eyebrow">NEET UG 2026</p>
+        <h1>Rank Predictor Portal</h1>
+        <p class="subtitle">
+          Built using last published official NEET UG statistics and counselling references.
+        </p>
+      </header>
+
+      <section class="card form-card">
+        <h2>Predict your expected AIR</h2>
+        <form id="predictor-form">
+          <label for="marks">Expected Marks (0–720)</label>
+          <input id="marks" name="marks" type="number" min="0" max="720" required />
+
+          <label for="candidates">Expected candidates appearing in 2026</label>
+          <input id="candidates" name="candidates" type="number" min="1000000" step="1" />
+          <small>Leave blank to use last official appeared count.</small>
+
+          <button type="submit">Predict Rank</button>
+        </form>
+        <div id="result" class="result" aria-live="polite"></div>
+      </section>
+
+      <section class="card">
+        <h2>Last official year reference (NEET UG 2024)</h2>
+        <div class="grid" id="stats-grid"></div>
+      </section>
+
+      <section class="card">
+        <h2>Official data sources used</h2>
+        <ul>
+          <li><a href="https://nta.ac.in" target="_blank" rel="noreferrer">National Testing Agency (NTA)</a></li>
+          <li><a href="https://neet.ntaonline.in" target="_blank" rel="noreferrer">NEET examination portal</a></li>
+          <li><a href="https://mcc.nic.in" target="_blank" rel="noreferrer">Medical Counselling Committee (MCC)</a></li>
+        </ul>
+        <p class="note">
+          Predictor logic is an estimate based on previous official competition intensity. Final AIR depends on the actual 2026 score distribution.
+        </p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
